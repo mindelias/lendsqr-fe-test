@@ -1,0 +1,8 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_responsive.scss';
+
+h1 {
+    color: $primary-color;
+    font-size: rem(24px);
+
+}
