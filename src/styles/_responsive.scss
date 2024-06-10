@@ -1,0 +1,35 @@
+// Calculate size relative to viewport width
+@function vw($size) {
+    // @return ($size / 100) * 1vw;
+    @return calc((#{$size}/ 100) * 1vw);
+  }
+  
+  // Calculate size relative to viewport height
+  @function vh($size) {
+    // @return ($size / 100) * 1vh;
+    @return calc((#{$size}/ 100) * 1vh);
+  }
+  
+  // Calculate size relative to a base font size
+  @function rem($size, $base-font-size: 16px) {
+
+    // @return $size / $base-font-size * 1rem;
+    @return calc(#{$size} / #{$base-font-size} * 1rem);
+    
+  }
+  
+  // Responsive * Media queries */
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: 600px) { @content; }
+    } @else if $breakpoint == sm {
+      @media (min-width: 600px) { @content; }
+    } @else if $breakpoint == md {
+      @media (min-width: 768px) { @content; }
+    } @else if $breakpoint == lg {
+      @media (min-width: 992px) { @content; }
+    } @else if $breakpoint == xl {
+      @media (min-width: 1200px) { @content; }
+    }
+  }
+  
