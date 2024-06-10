@@ -1,0 +1,19 @@
+@import './variable.scss';
+@import './responsive.scss';
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 50px;
+
+    h1 {
+        color: $primary-color;
+        font-size: rem(24px);
+
+    }
+
+    .app-main{
+        flex: 1;
+    }
+}
