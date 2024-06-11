@@ -8,6 +8,11 @@ import Users from "../screens/user/Users";
      
     {
       id: 1,
+      path: '/dashboard',
+      element:  <Users /> 
+    },
+    {
+      id: 2,
       path: '/users',
       element:  <Users /> 
     },
@@ -16,59 +21,15 @@ import Users from "../screens/user/Users";
       path: '/user/:id',
       element: <UserDetails />
     },
+    {
+      id: 3,
+      path: '/karma',
+      element: <UserDetails />
+    },
      
     
   ];
 
-  export const menu = [
-    {
-      key: 1,  
-      title: 'Switch Organization',
-      link: '/app/dashboard',
-      icon: require('../assets/icons/briefcase.svg'),
-    },
-    {
-        key: 2,
-        title: 'Dashboard',
-        link: '/app/dashboard',
-    },
-    {
-      key: 3 ,
-      title: 'Customers',
-      menuOpen: true,
-      subMenu: [
-        {
-          key: 4, 
-          title: 'All Users',
-          link: '/app/users',
-          icon: require('../assets/icons/users.svg'),
-        },
-        {
-          key: 5, 
-          title: 'Inactive Users',
-          link: '/app/inactive-users',
-          icon: require('../assets/icons/users.svg'),
-        },
-        {
-          key: 6,
-          title: 'Dormant Users',
-          link: '/app/dormant-users',
-          icon: require('../assets/icons/users.svg'),
-        },
-        {
-          key: 7,
-          title: 'Top Senders',
-          link: '/app/top-senders',
-          icon: require('../assets/icons/users.svg'),
-        },
-      ],
-    },
   
-    
-    {
-      title: 'Logout',
-      link: '/auth/login',
-    },
-  ];
   export default routes
   

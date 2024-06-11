@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import Sidebar from '../components/SideBar/SideBar';
 // import Navbar from '../components/Navbar';
@@ -6,10 +6,13 @@ import Sidebar from '../components/SideBar/SideBar';
 
 
 const AppWrapper = ({ children }: LayoutProps) => {
+  const [activePath, setActivePath] = useState('/users');
+
   return (
     <div className="app-wrapper">
       <Header />
       <Sidebar />
+       
       <div className="main-content">
         {/* <Navbar /> */}
         {children}

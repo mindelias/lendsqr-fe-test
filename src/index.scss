@@ -2,4 +2,10 @@
 @import './styles/variable';
 @import './styles/main.scss';
 @import './styles/common.scss';
+@import './styles/function.scss';
 
+body {
+    font-family: $font-family-primary;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,57 @@
+@import '../../styles/variable';
+@import '../../styles/responsive';
+@import '../../styles/function';
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: scaleFont(5px, 12px);
+    &.active {
+        // background-color:  rgba(57, 205, 204, 0.2);
+        background-color:  opacity($color:  $secondary-color, $opacity: 0.2);
+        // opacity: 0.2;
+        border-left: 4px solid $secondary-color;
+        
+    }
+   
+}
+
+.title {
+    font-size: scaleFont(12px, 15px);
+    cursor: pointer;
+    // margin: scaleFont(12px, 15px) 0px;
+    color:  opacity($color: $primary-color, $opacity: 0.6);
+    font-size: scaleFont(12px, 14px);   
+    text-decoration: none;
+    font-family: $font-family-primary;
+    &:hover {
+        color: $primary-color;
+        opacity: 0.5;
+    }
+
+    &.active {
+        color: opacity($color: $primary-color, $opacity: 1);
+         
+    }
+   
+}
+.submenu-title {
+    padding-left: scaleFont(5px, 12px);
+    padding-right: scaleFont(5px, 12px);
+    color: $text-color-primary;
+    text-align: left;
+    font-size: scaleFont(7px, 10px);
+    margin-bottom: scaleFont(5px, 10px);
+    text-decoration: none;
+    font-family: $font-family-primary;
+    text-transform:  uppercase;
+}
+.icon {
+    margin-right: 8px;
+    // width: 24px;
+    // height: 24px;
+    img {
+        width: scaleFont(12px, 15px);
+        // height: 100%;
+    }
+}

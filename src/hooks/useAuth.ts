@@ -7,7 +7,7 @@ const useAuth = () => {
   useEffect(() => {
     const auth = localStorage.getItem('lendsqr-auth');
     if (auth) {
-        navigate('/users');
+        // navigate('/users');
       } else {
         navigate('/login');
       }

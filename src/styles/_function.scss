@@ -1,0 +1,7 @@
+@function opacity($color, $opacity) {
+    // Ensure the color is in RGB format
+    $rgb: if(type-of($color) == "color", $color, unquote($color));
+  
+    @return rgba(red($rgb), green($rgb), blue($rgb), $opacity);
+  }
+  
