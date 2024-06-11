@@ -1,0 +1,43 @@
+@import '../../styles/variable' ;
+@import '../../styles/responsive' ;
+
+.header-container {
+    width: 100%;
+    height: verticalScale(80px);
+    background-color: $white-color;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    padding: scaleFont(6px, 8px) scaleFont(5px, 6px);
+    box-shadow: $box-shadow-bottom; 
+    position: fixed;
+    z-index: 10;
+    a{ 
+        color: $primary-color;
+    }
+}
+
+.logo {
+    width: scaleFont(80px, 120px);
+    height: 40px;
+    object-fit: contain;
+}
+.item-left{
+    flex: 3;
+    // justify-content: space-between;
+
+    .search-wrapper{
+        width: 50%
+    }
+}
+.item-right {
+    flex: 2;
+    padding: 0px scaleFont(5px, 20px);
+    .user-image{
+        border-radius: 50%;
+        object-fit: contain;
+    }
+}
+.ant-btn-primary {
+    background-color:  $secondary-color
+}

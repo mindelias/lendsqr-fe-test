@@ -23,6 +23,7 @@
     color:  opacity($color: $primary-color, $opacity: 0.6);
     font-size: scaleFont(12px, 14px);   
     text-decoration: none;
+    text-align: left;
     font-family: $font-family-primary;
     &:hover {
         color: $primary-color;
