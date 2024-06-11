@@ -31,3 +31,14 @@ $border-radius: 4px;
 // Shadows
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $box-shadow-bottom: 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+
+
+
+// Default SCSS variables
+$default-base-font-size: 1rem; // Default minimum font size
+$default-scale-factor: 2vw; // Default scale factor based on viewport width
+$default-max-font-size: 2rem; // Default maximum font size
+
+$default-base-line-height: 1.5; // Default minimum line height
+$default-scale-factor-height: 2vh; // Default scale factor based on viewport height
+$default-max-line-height: 2; // Default maximum line height

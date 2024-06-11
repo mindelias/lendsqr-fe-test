@@ -1,5 +1,5 @@
-@import '../../styles/responsive' ;  
-@import '../../styles/variable' ;
+@import '../../styles/main.scss';  
+
 
 .sidebar-container {
     display: flex;
@@ -10,14 +10,15 @@
     width:  20%;
     background: $white-color;
     box-shadow: $box-shadow;
+    flex: 1;
     // height: calc(100vh - 200px);
     // margin-top: 200px;
    
 }
 .sidebar-content{
-   margin-top: 100px;
+   margin-top: verticalScale(120px);
    width: 100%;
-   height: calc(100vh - 100px);
+   height: calc(100vh -  verticalScale(80px));
 }
 
 

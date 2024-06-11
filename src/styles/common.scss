@@ -1,0 +1,28 @@
+@import '../styles/variable';
+@import '../styles/responsive';
+// font-sizes
+.app-heading--3{
+    font-size:  scaleFont(10px, 35px);
+    font-family: $font-family-primary;
+    font-weight:  '600';
+    color: $primary-color
+}
+
+.app-heading--4{
+    font-size:  scaleFont(10px, 30px);
+    font-family: $font-family-primary;
+    font-weight:  '600';
+    color: $primary-color
+}
+.app-paragraph{
+    color: $text-color-primary;
+    font-size: scaleFont(10px, 14px);
+    font-family: $font-family-primary;
+}
+
+.text-transform-upper{
+    text-transform: uppercase;
+}
+.text-left{
+    text-align: left;
+}

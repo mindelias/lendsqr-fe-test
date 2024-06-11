@@ -1,0 +1,20 @@
+@import '../../../styles/main.scss';
+
+
+
+.card-container {
+    // max-height: scale(80px, 120px);
+    height: scale(80px, 130px);
+    display: flex;
+    // flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+
+    img{
+        width: scale(15px, 45px);
+        object-fit: contain;
+    }
+     
+     
+}

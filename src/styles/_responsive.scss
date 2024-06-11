@@ -1,3 +1,4 @@
+
 // Calculate size relative to viewport width
 @function vw($size) {
     // @return ($size / 100) * 1vw;
@@ -29,7 +30,7 @@
     @return calc(#{$size} + (#{$size} * #{$factor} * ($scaling-ratio)));
   }
    
-  @function verticalScale($size, $factor: 0.5, $lower-range: 320px, $upper-range: 900px) {
+  @function verticalScale($size, $factor: 0.5, $lower-range: 320px, $upper-range: 1900px) {
     // Calculate the viewport height in pixels
     $viewport-height: 100vh / 1vh * 1px;
   
@@ -40,16 +41,18 @@
     @return calc(#{$size} + (#{$size} * #{$factor} * ($scaling-ratio)));
   }
 
-
-  
-  
-
-
-  @function scaleFont($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+  @function scale($min-font-size: 12px, $max-font-size: 21px, $lower-range: 320px, $upper-range: 1900px) {
     // @return calc(#{$min-font-size} + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$lower-range}) / (#{$upper-range} - #{$lower-range}));
     @return calc( #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))}  * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}))
     
   }
+
+  @function scaleFont($min-font-size: 12px, $max-font-size: 21px, $lower-range: 320px, $upper-range: 1900px) {
+    // @return calc(#{$min-font-size} + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$lower-range}) / (#{$upper-range} - #{$lower-range}));
+    @return calc( #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))}  * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}))
+    
+  }
+
 
   
   // Responsive * Media queries */

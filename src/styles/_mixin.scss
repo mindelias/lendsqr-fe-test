@@ -1,0 +1,25 @@
+@import './variable';
+
+// Mixin to apply responsive font size
+@mixin responsive-size($property, $base-size: $default-base-font-size, $scale-factor: $default-scale-factor, $max-size: $default-max-font-size) {
+    #{$property}: clamp(#{$base-size}, #{$scale-factor}, #{$max-size});
+  }
+  
+  @mixin responsive-line-height($property, $base-size: $default-base-line-height, $scale-factor: $default-scale-factor-height, $max-size: $default-max-line-height) {
+    #{$property}: clamp(#{$base-size}, #{$scale-factor}, #{$max-size});
+  }
+  
+
+
+//   @mixin scale($property, $base-size: $default-base-font-size, $scale-factor: $default-scale-factor, $max-vw: 1900px, $min-vw: 320px) {
+//     #{$property}:  calc(#{$base-size} + #{(($scale-factor / ($scale-factor * 0 + 1)) - ($base-size / ($base-size * 0 + 1)))} * ( (100vw - #{$min-vw}) / #{(($max-vw / ($max-vw * 0 + 1)) - ($min-vw / ($min-vw * 0 + 1)))}))
+//   }
+
+
+//   @mixin scale($property, $base-size ,  $scale-factor) {
+//     #{$property}:  calc(#{$base-size} +  (#{$base-size} * #{($scale-factor * 100vw) / 100}))
+//   }
+  @mixin scale($property, $base-size, $scale-factor) {
+    #{$property}: calc(#{$base-size} + (#{$scale-factor} * 100vw / 100));
+  }
+  

@@ -1,12 +1,15 @@
 @import './responsive';
 @import './variable';  
+@import './function';
+@import './common.scss';
+@import './mixin';
 
 // Example usage in styles
 body {
   // font-size: rem(16px);
 }
 
-.header {
+.headerzzzz {
   width: vw(100); // full width of the viewport
   height: vh(10); // 10% of the viewport height
   background-color: $primary-color;

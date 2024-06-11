@@ -5,7 +5,7 @@
 .menu-item {
     display: flex;
     align-items: center;
-    padding: scaleFont(5px, 12px);
+    padding: scaleFont(12px, 25px);
     &.active {
         // background-color:  rgba(57, 205, 204, 0.2);
         background-color:  opacity($color:  $secondary-color, $opacity: 0.2);
@@ -17,11 +17,11 @@
 }
 
 .title {
-    font-size: scaleFont(12px, 15px);
+    // font-size: scaleFont(12px, 15px);
     cursor: pointer;
     // margin: scaleFont(12px, 15px) 0px;
     color:  opacity($color: $primary-color, $opacity: 0.6);
-    font-size: scaleFont(12px, 14px);   
+    font-size: scaleFont(10px, 20px);   
     text-decoration: none;
     text-align: left;
     font-family: $font-family-primary;
@@ -37,20 +37,18 @@
    
 }
 .submenu-title {
-    padding-left: scaleFont(5px, 12px);
-    padding-right: scaleFont(5px, 12px);
+    padding-left: scaleFont(5px, 20px);
+    padding-right: scaleFont(10px, 20px);
     color: $text-color-primary;
     text-align: left;
-    font-size: scaleFont(7px, 10px);
-    margin-bottom: scaleFont(5px, 10px);
+    font-size: scaleFont(10px, 15px);
+    margin-bottom: scaleFont(5px, 12px);
     text-decoration: none;
     font-family: $font-family-primary;
     text-transform:  uppercase;
 }
 .icon {
     margin-right: 8px;
-    // width: 24px;
-    // height: 24px;
     img {
         width: scaleFont(12px, 15px);
         // height: 100%;

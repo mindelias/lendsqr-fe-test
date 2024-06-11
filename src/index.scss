@@ -1,8 +1,16 @@
+@import './styles/main.scss';
 @import './styles/responsive';
 @import './styles/variable';
-@import './styles/main.scss';
 @import './styles/common.scss';
 @import './styles/function.scss';
+@import './styles/mixin';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: $font-family-primary;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import Sidebar from '../components/SideBar/SideBar';
+import './styles.scss'
 // import Navbar from '../components/Navbar';
 
 

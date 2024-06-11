@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import UserMetricCardList from "../../components/User/UserCard/UserMetricCardList";
 
 const Users = () => {
   return (
-    <div>Users</div>
-  )
-}
+    <div>
+      <UserMetricCardList />
+    </div>
+  );
+};
 
-export default Users
+export default Users;
