@@ -26,3 +26,21 @@
 .text-left{
     text-align: left;
 }
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb-lg{
+    margin-bottom: scaleFont(10px, 25px);
+}
+
+.mb-md{
+    margin-bottom: scaleFont(10px, 15px);
+}
