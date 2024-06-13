@@ -1,9 +1,24 @@
-import React from 'react'
+import { Col, Row, Space } from "antd";
+import React from "react";
 
 const UserDetails = () => {
   return (
-    <div>UserDetails</div>
-  )
-}
+    <div>
+      <Row justify={"space-between"} align={"middle"} className="mb-3" gutter={[16, 16]}>
+        <Col>
+      <p className="app-heading--3 text-left mb-lg">User Details</p>
+        
+        </Col>
+        <Col>
+        <Space>
 
-export default UserDetails
+          
+        </Space>
+        </Col>
+
+      </Row>
+    </div>
+  );
+};
+
+export default UserDetails;
