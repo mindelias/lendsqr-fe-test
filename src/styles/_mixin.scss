@@ -1,4 +1,5 @@
 @import './variable';
+@import './responsive';
 
 // Mixin to apply responsive font size
 @mixin responsive-size($property, $base-size: $default-base-font-size, $scale-factor: $default-scale-factor, $max-size: $default-max-font-size) {
@@ -23,3 +24,17 @@
     #{$property}: calc(#{$base-size} + (#{$scale-factor} * 100vw / 100));
   }
   
+
+  @mixin app-heading($min-font-size, $max-font-size, $font-weight: '600', $color: $primary-color) {
+    font-size:  scaleFont($min-font-size, $max-font-size);
+    font-family: $font-family-primary;
+    font-weight:  $font-weight;
+    color: $color;
+  }
+  
+  @mixin app-text($min-font-size, $max-font-size, $font-weight: '500', $color: $text-color-primary) {
+    font-size:  scaleFont($min-font-size, $max-font-size);
+    font-family: $font-family-primary;
+    font-weight:  $font-weight;
+    color: $color;
+  }

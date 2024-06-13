@@ -1,27 +1,40 @@
-@import '../styles/variable';
-@import '../styles/responsive';
+ @import './variable';
+ @import './responsive';
+ @import './mixin';
 // font-sizes
 .app-heading--3{
-    font-size:  scaleFont(10px, 35px);
-    font-family: $font-family-primary;
-    font-weight:  '600';
-    color: $primary-color
+    @include app-heading(14px, 30px);
 }
-
 .app-heading--4{
-    font-size:  scaleFont(10px, 30px);
-    font-family: $font-family-primary;
-    font-weight:  '600';
-    color: $primary-color
+    @include app-heading(10px, 30px);
+}
+.app-heading--5{
+    @include app-heading(10px, 25px);
 }
 .app-paragraph{
-    color: $text-color-primary;
-    font-size: scaleFont(10px, 14px);
-    font-family: $font-family-primary;
+    @include app-text(12px, 14px);
+}
+.app-text-small{
+    @include app-text(10px, 12px);
+}
+
+.border-primary{
+    border-color: $primary-color !important;
+}
+.text-primary{
+    color: $primary-color;
+}
+
+.border-secondary{
+    border-color: $secondary-color !important;
+}
+.text-secondary{
+    color: $secondary-color !important;
 }
 
 .text-transform-upper{
     text-transform: uppercase;
+    font-family: $font-family-primary;
 }
 .text-left{
     text-align: left;
@@ -43,4 +56,13 @@
 
 .mb-md{
     margin-bottom: scaleFont(10px, 15px);
+}
+
+.card-style{
+    background-color: $white-color;
+    box-shadow: $box-shadow;
+    border-radius: 4px;
+    padding: scaleFont(10px, 30px);
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
 }
