@@ -1,4 +1,4 @@
-import UserDetails from "../screens/user/UserDetails";
+import UserDetails from "../screens/user/UserDetails/UserDetails";
 import Users from "../screens/user/Users";
  
  
