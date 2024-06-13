@@ -1,0 +1,25 @@
+@import '../../../styles/main.scss';
+
+
+.avatar {
+    width: scale(50px, 100px);
+    height: scale(50px, 100px);
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbe0ea;
+}
+
+.user-tier {
+   padding: scale(12px, 30px);
+   border-left: 1px solid opacity($color: $text-color-primary, $opacity: 0.2);
+   border-right: 1px solid opacity($color: $text-color-primary, $opacity: 0.2);
+}
+.spacing {
+    margin: 0px scale(10px, 20px);
+}
+.mb-10{
+    margin-bottom: 10px;
+}
