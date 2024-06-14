@@ -11,6 +11,10 @@
 .app-heading--5{
     @include app-heading(10px, 25px);
 }
+
+.app-heading--6{
+    @include app-heading(10px, 20px);
+}
 .app-paragraph{
     @include app-text(12px, 14px);
 }
@@ -63,6 +67,9 @@
 
 .mb-md{
     margin-bottom: scaleFont(10px, 15px);
+}
+.mb-sm{
+    margin-bottom: scaleFont(5px, px);
 }
 
 .card-style{
