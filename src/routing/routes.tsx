@@ -26,6 +26,9 @@ import Users from "../screens/user/Users";
       path: '/karma',
       element: <UserDetails />
     },
+    {
+      
+    }
      
     
   ];

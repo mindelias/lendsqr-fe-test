@@ -21,3 +21,10 @@ body {
 .ant-btn-primary {
     background-color:  $primary-color;
 }
+.ant-btn:hover, .ant-btn:focus {
+    color: $secondary-color !important;
+    border-color: $secondary-color !important;
+}
+.ant-input-outlined:hover {
+    border-color: $secondary-color !important;
+}
