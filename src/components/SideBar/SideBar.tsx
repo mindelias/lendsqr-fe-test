@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import { menu } from "../../data/app-menu";
-import MenuItem from "../MenuItem/MenuItem";
-import "./styles.scss";
-import { useLocation, useNavigate } from "react-router-dom";
+import React  from "react";
 import { Drawer } from "antd";
 import useIsMobile from "../../hooks/useIsMobile";
 import useLayoutStore from "../../store/layout";
 import SideBarContent from "./SideBarContent";
+import "./styles.scss";
 
 const SideBar = () => {
   const { isSidebarCollapsed, setSidebarCollapsed } = useLayoutStore();

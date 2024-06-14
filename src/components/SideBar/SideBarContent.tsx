@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { menu } from "../../data/app-menu";
 import MenuItem from "../MenuItem/MenuItem";
 import { useLocation } from "react-router-dom";
-import useIsMobile from "../../hooks/useIsMobile";
+
 import "./styles.scss";
  
 

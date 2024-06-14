@@ -1,9 +1,7 @@
 // src/Table.js
 
-import React, { useEffect, useState } from "react";
-import FilterDropdownIcon from "../../assets/icons/filter-icon.svg";
-import { Popover } from "antd";
-
+import React, {   useState } from "react";
+ 
 import "./styles.scss";
 import TableHeader from "./TableHeader/TableHeader";
 import Ellipsis from '../../assets/icons/ellipsis.svg'

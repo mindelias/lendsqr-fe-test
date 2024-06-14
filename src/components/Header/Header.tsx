@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../assets/images/logo.svg";
 import "./styles.scss";
-import { Button, Col, Divider, Dropdown, Input, Row, Space } from "antd";
+import { Button, Col,  Dropdown, Input, Row, Space } from "antd";
 import Bell from "../../assets/icons/bell.svg";
 import UserImg from "../../assets/images/user-img.svg";
 import DropdownIcon from "../../assets/icons/dropdown.svg";

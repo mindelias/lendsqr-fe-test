@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './styles.scss';
 import { List } from 'antd';
 
 
 
 function MenuItem({ item, active, setActivePath, activePath }: MenuProps) {
-  const location = useLocation();
   const navigate = useNavigate();
   const { title, path, icon, name } = item;
 

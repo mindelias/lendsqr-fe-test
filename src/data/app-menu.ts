@@ -1,5 +1,4 @@
 import Briefcase from "../assets/icons/briefcase-active.svg";
-import Users from "../assets/icons/activate-user.svg";
 import UserTimes from "../assets/icons/user-times.svg";
 import UserFriends from "../assets/icons/user-friends.svg";
 import Home from "../assets/icons/home.svg";
