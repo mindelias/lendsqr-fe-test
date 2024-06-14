@@ -18,11 +18,18 @@
     @include app-text(10px, 12px);
 }
 
+.bg-primary{
+    background-color: $primary-color;
+}
+.bg-secondary{
+    background-color: $secondary-color;
+}
+
 .border-primary{
     border-color: $primary-color !important;
 }
 .text-primary{
-    color: $primary-color;
+    color: $primary-color !important;
 }
 
 .border-secondary{
