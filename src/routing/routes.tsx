@@ -18,7 +18,7 @@ import Users from "../screens/user/Users";
     },
     {
       id: 3,
-      path: '/user/:id',
+      path: '/user/details',
       element: <UserDetails />
     },
     {
