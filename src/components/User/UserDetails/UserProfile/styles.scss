@@ -1,7 +1,26 @@
+@import "../../../../styles/main.scss";
 
+.user-profile-item-container {
+  border-bottom: 1px solid opacity($color: $primary-color, $opacity: 0.1);
+  padding-bottom: scaleFont(12px, 30px);
+}
 
-.subtitle{
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    text-align: left;
+.profile-title {
+  text-align: left;
+  @include app-heading(10px, 20px, $font-weight-medium);
+
+   
+  margin-top: 20px;
+}
+ 
+ 
+.subtitle {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-align: left;
+  @include app-text(12px, 14px, 300);
+}
+.value {
+  text-align: left;
+  @include app-heading(10px, 20px, "600", $text-color-primary);
 }

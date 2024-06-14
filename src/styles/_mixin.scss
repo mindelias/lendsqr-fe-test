@@ -11,7 +11,6 @@
   }
   
 
-
 //   @mixin scale($property, $base-size: $default-base-font-size, $scale-factor: $default-scale-factor, $max-vw: 1900px, $min-vw: 320px) {
 //     #{$property}:  calc(#{$base-size} + #{(($scale-factor / ($scale-factor * 0 + 1)) - ($base-size / ($base-size * 0 + 1)))} * ( (100vw - #{$min-vw}) / #{(($max-vw / ($max-vw * 0 + 1)) - ($min-vw / ($min-vw * 0 + 1)))}))
 //   }
@@ -25,14 +24,14 @@
   }
   
 
-  @mixin app-heading($min-font-size, $max-font-size, $font-weight: '600', $color: $primary-color) {
+  @mixin app-heading($min-font-size, $max-font-size, $font-weight: $font-weight-medium-bold, $color: $primary-color) {
     font-size:  scaleFont($min-font-size, $max-font-size);
     font-family: $font-family-primary;
     font-weight:  $font-weight;
     color: $color;
   }
   
-  @mixin app-text($min-font-size, $max-font-size, $font-weight: '500', $color: $text-color-primary) {
+  @mixin app-text($min-font-size, $max-font-size, $font-weight: $font-weight-regular, $color: $text-color-primary) {
     font-size:  scaleFont($min-font-size, $max-font-size);
     font-family: $font-family-primary;
     font-weight:  $font-weight;

@@ -33,7 +33,7 @@ const UserDetails = () => {
           <TabList onTabClick={(tab) => setActiveTab(tab)} activeTab={activeTab} />
         </div>
 
-        <div className="card-style h-min-300">
+        <div className="card-style pt-0 h-min-300">
           {activeTab === "general-details" &&  <UserProfile/>}
           {activeTab === "documents" && <div>Documents</div>}
           {activeTab === "bank-details" && <div>Bank Details</div>}

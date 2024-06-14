@@ -7,26 +7,83 @@ const UserProfile = () => {
   return (
     <div className="user-profile">
       <UserProfileItem title="Personal Information">
-        <Col>
-          <p className="app-paragraph "> Full Name</p>
-          <p className="app-heading--6 text-left"> Grace Effiom</p>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Full Name</p>
+          <p className="value"> Grace Effiom</p>
         </Col>
 
-        <Col>
-          <p className="app-paragraph text-left"> Full Name</p>
-          <p className="app-heading--6 text-left"> Grace Effiom</p>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Phone Number</p>
+          <p className="value"> Grace Effiom</p>
         </Col>
-        <Col>
-          <p className="app-paragraph text-left"> Full Name</p>
-          <p className="app-heading--6 text-left"> Grace Effiom</p>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Email Address</p>
+          <p className="value"> Grace Effiom</p>
         </Col>
-        {/* <p>Full Name: <span>Grace Effiom</span></p>
-        <p>Email: <span>LSQFf587g90</span></p>
-        <p>Phone Number: <span>9912345678</span></p>
-        <p>Gender: <span>Female</span></p>
-        <p>Marital Status: <span>Married</span></p>
-        <p>Date of Birth: <span>11/11/1990</span></p> */}
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> BVN</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Gender</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle">  Marital Status</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Children</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Type Of residence</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+         
       </UserProfileItem>
+
+
+      <UserProfileItem title="Education and Employment">
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Full Name</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Phone Number</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Email Address</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> BVN</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Gender</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle">  Marital Status</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Children</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+        <Col span={4} xl={4} md={8} xs={12} className="mb-lg">
+          <p className="subtitle"> Type Of residence</p>
+          <p className="value"> Grace Effiom</p>
+        </Col>
+         
+      </UserProfileItem>
+
+      
     </div>
   );
 };

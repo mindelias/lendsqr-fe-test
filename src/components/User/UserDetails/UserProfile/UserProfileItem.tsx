@@ -1,5 +1,6 @@
 import { Row } from "antd";
 import React from "react";
+import './styles.scss'
 
 type UserProfileItemProps = {
   title: string;
@@ -9,8 +10,8 @@ type UserProfileItemProps = {
 const UserProfileItem: React.FC<UserProfileItemProps> = ({ title, children }) => {
   return (
     <div className="user-profile-item-container">
-      <p className="app-heading--6 text-left">{title}</p>
-      <Row gutter={8} justify={"space-between"} wrap>
+      <p className="profile-title mb-lg">{title}</p>
+      <Row gutter={8} justify={"start"} wrap>
 
         {children}
       </Row>
