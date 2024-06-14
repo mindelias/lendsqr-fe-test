@@ -3,46 +3,35 @@ import { menu } from "../../data/app-menu";
 import MenuItem from "../MenuItem/MenuItem";
 import "./styles.scss";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Drawer } from "antd";
+import useIsMobile from "../../hooks/useIsMobile";
+import useLayoutStore from "../../store/layout";
+import SideBarContent from "./SideBarContent";
 
 const SideBar = () => {
-  const [activePath, setActivePath] = useState("/users");
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { isSidebarCollapsed, setSidebarCollapsed } = useLayoutStore();
+  const isMobile = useIsMobile();
+
+  const onClose = () => {
+    setSidebarCollapsed(false);
+  };
 
   return (
-    <aside className="sidebar-container">
-      <div className="sidebar-content">
-        {menu.map((menu) => {
-          if (menu?.hasSubMenu) {
-            return (
-              <div key={menu.key}>
-                <p className="submenu-title">{menu.title}</p>
-                {menu.subMenu?.map((subMenu) => (
-                  <MenuItem
-                    key={subMenu.key}
-                    item={subMenu}
-                    // onClick={() => handleClick(subMenu, subMenu.path)}
-                    active={location.pathname === subMenu.path}
-                    activePath={activePath}
-                    setActivePath={setActivePath}
-                  />
-                ))}
-              </div>
-            );
-          } else {
-            return (
-              <MenuItem
-                key={menu.key}
-                item={menu}
-                active={location.pathname === menu.path}
-                setActivePath={setActivePath}
-                activePath={activePath}
-              />
-            );
-          }
-        })}
-      </div>
-    </aside>
+    <section className="sidebar-wrapper">
+      <aside className={`sidebar-container ${isMobile ? "d-none" : ""} `}>
+        <SideBarContent />
+      </aside>
+      <Drawer
+        title="Menu"
+        placement={"left"}
+        closable={true}
+        onClose={onClose}
+        open={isSidebarCollapsed}
+        key={"left"}
+      >
+        <SideBarContent />
+      </Drawer>
+    </section>
   );
 };
 
