@@ -1,12 +1,7 @@
-// src/Table.js
-
 import React, {   useState } from "react";
- 
-import "./styles.scss";
 import TableHeader from "./TableHeader/TableHeader";
-import Ellipsis from '../../assets/icons/ellipsis.svg'
-import { faker } from '@faker-js/faker';
 import TableBody from "./TableBody";
+import "./styles.scss";
 
 
 
@@ -28,10 +23,6 @@ const Table = ({ data }: { data: any }) => {
     status: ""
   });
 
- 
- 
-  
-  
   // const mockData = generateMockData(500); //
 
   // console.log(mockData);
@@ -46,20 +37,6 @@ const Table = ({ data }: { data: any }) => {
       ...prevValues,
       [key]: value
     }));
-  };
-
-  const showMenu = () => {
-    
-  }
-// Generate mock data
- 
-  // const handleOpenChange = (newOpen: boolean, filterType: string) => {
-  //   setIsOpen(newOpen);
-  //   setFilterType(filterType);
-  // };
-  const hide = () => {
-    setIsOpen(false);
-    setFilterType("");
   };
 
   return (
@@ -84,7 +61,7 @@ const Table = ({ data }: { data: any }) => {
             
           </tr>
         </thead>
-       <TableBody data={data} showMenu={showMenu} />
+       <TableBody data={data} />
       </table>
     </div>
   );

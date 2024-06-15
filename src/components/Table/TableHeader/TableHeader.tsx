@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Popover } from "antd";
 import FilterDropdownIcon from "../../../assets/icons/filter-icon.svg";
 import { RenderFilterContent } from "./RenderFilterContent";
-import dayjs from "dayjs";
 import { useUserStore } from "../../../store/users";
 
 function TableHeader({

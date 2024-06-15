@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import Logo from "../../assets/images/logo.svg";
 import DecorImage from "../../assets/images/decor-sign-in.svg";
 import LoginForm from "../../components/Login/LoginForm";

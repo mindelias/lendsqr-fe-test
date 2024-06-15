@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Ellipsis from "../../assets/icons/ellipsis.svg";
 import { Dropdown, Space } from "antd";
 import type { MenuProps } from "antd";
@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useUserStore } from "../../store/users";
 import dayjs from "dayjs";
 
-const TableBody = ({ data, showMenu }: { data: any; showMenu: any }) => {
+const TableBody = ({ data }: { data: any }) => {
   const { updateUser } = useUserStore();
   const navigate = useNavigate();
   const getStatusClassName = (status: string) => {
@@ -94,7 +94,7 @@ const TableBody = ({ data, showMenu }: { data: any; showMenu: any }) => {
             {" "}
             <span className={getStatusClassName(row.status)}> {row.status}</span>
           </td>
-          <td onClick={showMenu}>
+          <td>
             <Dropdown menu={{ items, onClick: (e) => handleMenuClick(e, index, row) }}>
               <div>
                 <Space>
