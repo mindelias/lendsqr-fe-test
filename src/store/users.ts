@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 
 export const useUserStore = create<UserStore>((set, get) => ({
   users: [],
+  user: {},
   total: 0,
   filteredUsers: [],
   page: 1,
@@ -16,17 +17,28 @@ export const useUserStore = create<UserStore>((set, get) => ({
     try {
       const { page, perPage } = get();
       const response = await axios.get(
-        `https://run.mocky.io/v3/ad6c5f91-88f7-43e1-87e8-c34940018301?page=${page}&perPage=${perPage}`
+        `https://run.mocky.io/v3/8cc1a565-3ff5-403f-8b1f-f5dd4050e343?page=${page}&perPage=${perPage}`
       );
-      set({
+      set((state) => ({
+        ...state,
         users: response.data.data,
         filteredUsers: response.data.data,
         loading: false,
         total: response.data.data.length,
-      });
+      }));
     } catch (error) {
       set({ loading: false, error: "Failed to fetch users" });
     }
+  },
+  getUser: (id) => {
+    const { users } = get();
+    const user = users.find((user) => user.id === id);    
+    set((state) => ({
+      ...state,
+      user: user || null,
+    }));
+
+    return user || null;
   },
   updateUser: (updatedUser) => {
     const { users } = get();
@@ -38,7 +50,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
     const filteredUsers = users.filter((user) =>
       Object.entries(query).every(([key, value]) => {
         if (key === "dateJoined") {
-          const filterDate = dayjs(value);
+          const filterDate = dayjs(value as string);
           const userDate = dayjs(user.dateJoined);
 
           // Compare year and month

@@ -3,8 +3,9 @@ import { Row, Col,  Space } from 'antd'
 import Avatar from '../../../../assets/icons/avatar.svg'
 import StarGoldFill from '../../../../assets/icons/star-gold-filled.svg'
 import StarGold from '../../../../assets/icons/star-gold.svg'
+import { formatCurrency } from '../../../../utils/formatAmount'
 
-const UserSummaryCard = () => {
+const UserSummaryCard = ({user}: {user: Partial<User>}) => {
   return (
     <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 16]} align={"middle"}>
     <Col>
@@ -31,7 +32,7 @@ const UserSummaryCard = () => {
       </div>
     </Col>
     <Col>
-      <p className="app-heading--4 mb-10 text-left">₦200,000.00</p>
+      <p className="app-heading--4 mb-10 text-left"> {formatCurrency(parseFloat(user.educationAndEmployment?.monthlyIncome[0] as string))}</p>
 
       <p className="app-paragraph">9912345678/Providus Bank</p>
     </Col>

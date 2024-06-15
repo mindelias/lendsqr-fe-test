@@ -18,9 +18,9 @@
   text-transform: uppercase;
   margin-bottom: 5px;
   text-align: left;
-  @include app-text(12px, 14px, 300);
+  @include app-text(10px, 13px, 300);
 }
 .value {
   text-align: left;
-  @include app-heading(10px, 20px, "600", $text-color-primary);
+  @include app-heading(10px, 18px, "600", $text-color-primary);
 }

@@ -2,6 +2,7 @@ import React, {   useState } from "react";
 import TableHeader from "./TableHeader/TableHeader";
 import TableBody from "./TableBody";
 import "./styles.scss";
+// import { generateMockData } from "../../utils/faker";
 
 
 
