@@ -10,6 +10,7 @@ interface User {
   
   interface UserStore {
     users: User[];
+    total: number;
     filteredUsers: User[];
     page: number;
     perPage: number;
@@ -18,6 +19,7 @@ interface User {
     fetchUsers: () => Promise<void>;
     updateUser: (updatedUser: User) => void;
     filterUsers: (query: Partial<User>) => void;
+    resetFilter: () => void;
     setPage: (page: number) => void;
   }
   

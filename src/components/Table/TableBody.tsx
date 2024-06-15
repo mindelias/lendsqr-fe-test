@@ -7,6 +7,7 @@ import BlacklistUser from "../../assets/icons/user-blacklist.svg";
 import ActivateUser from "../../assets/icons/activate-user.svg";
 import { useNavigate } from "react-router-dom";
 import { useUserStore } from "../../store/users";
+import dayjs from "dayjs";
 
 const TableBody = ({ data, showMenu }: { data: any; showMenu: any }) => {
   const { updateUser } = useUserStore();
@@ -19,8 +20,10 @@ const TableBody = ({ data, showMenu }: { data: any; showMenu: any }) => {
         return "status-span status-blacklisted";
       case "pending":
         return "status-span status-pending";
-      default:
+      case "inactive":
         return "status-span status-inactive";
+      default:
+        return "status-span";
     }
   };
 
@@ -86,7 +89,7 @@ const TableBody = ({ data, showMenu }: { data: any; showMenu: any }) => {
           <td>{row.username}</td>
           <td>{row.email}</td>
           <td>{row.phoneNumber}</td>
-          <td>{row.dateJoined}</td>
+          <td>{dayjs(row.dateJoined).format("MMMM D, YYYY h:mm A") }</td>
           <td>
             {" "}
             <span className={getStatusClassName(row.status)}> {row.status}</span>

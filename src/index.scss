@@ -21,10 +21,24 @@ body {
 .ant-btn-primary {
     background-color:  $primary-color;
 }
+.ant-btn{
+    width: 100%;
+    color: $white-color;
+    background-color: $secondary-color;
+}
+ 
 .ant-btn:hover, .ant-btn:focus {
     color: $secondary-color !important;
     border-color: $secondary-color !important;
 }
 .ant-input-outlined:hover {
     border-color: $secondary-color !important;
+}
+
+.ant-form-item-label label{
+    // color: $text-color-primary !important;
+    color: $text-color-primary !important;
+    font-size: scaleFont(12px, 14px) !important;
+    font-family: $font-family-primary !important;
+    font-weight: 500 !important;
 }

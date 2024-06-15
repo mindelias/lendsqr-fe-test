@@ -28,33 +28,9 @@ const Table = ({ data }: { data: any }) => {
     status: ""
   });
 
-  const generatePhoneNumber = () => {
-    const prefixes = ["080", "090"];
-    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-    const number = Math.floor(10000000 + Math.random() * 90000000).toString(); // Generate 8 random digits
-    return `${prefix}${number}`;
-  };
-  // const generateMockData = (length: number) => {
-  //   const statuses = ["active", "inactive", "blacklisted", "pending"];
-  //   const credit = ['loan', 'savings'];
-  //   const data = [];
-    
+ 
+ 
   
-  //   for (let i = 0; i < length; i++) {
-  //     data.push({
-  //       id: faker.datatype.uuid(),
-  //       organization: faker.company.name(),
-  //       username: faker.internet.userName(),
-  //       email: faker.internet.email(),
-  //       phoneNumber: generatePhoneNumber(),
-  //       dateJoined: faker.date.past().toISOString(), // YYYY-MM-DD format
-  //       status: statuses[Math.floor(Math.random() * statuses.length)],
-  //       credit: credit[Math.floor(Math.random() * credit.length)]
-  //     });
-  //   }
-  
-  //   return data;
-  // };
   
   // const mockData = generateMockData(500); //
 

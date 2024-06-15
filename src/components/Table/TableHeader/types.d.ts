@@ -6,6 +6,7 @@ type TableHeaderProps = {
     filterValues: any
     handleOpenChange: (isOpen: boolean, filterType: string) => void
     handleFilterChange: (key: string, value: string) => void
+    resetFilter?: () => void
      
 }
 
