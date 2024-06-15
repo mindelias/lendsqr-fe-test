@@ -1,0 +1,51 @@
+// _variables.scss
+
+// Colors
+$primary-color: #213F7D;
+$secondary-color: #39CDCC;
+$background-color: #FBFBFB;
+$border-color: #E5E5E5;
+$white-color: #fff;
+$black-color: #000;
+$danger: #E4033B;
+$text-color-primary: #545F7D;
+
+// Fonts
+$font-family-primary: 'Work Sans', sans-serif;
+$font-family-secondary: 'Roboto', sans-serif;
+
+
+// Font Sizes
+$font-size-base: 16px;
+$font-size-large: 20px;
+$font-size-small: 12px;
+
+// Font Weights
+$font-weight-bold: 700;
+$font-weight-medium-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+// Border Radius
+$border-radius: 4px;
+
+// Shadows
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-bottom: 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+
+
+
+// Default SCSS variables
+$default-base-font-size: 1rem; // Default minimum font size
+$default-scale-factor: 2vw; // Default scale factor based on viewport width
+$default-max-font-size: 2rem; // Default maximum font size
+
+$default-base-line-height: 1.5; // Default minimum line height
+$default-scale-factor-height: 2vh; // Default scale factor based on viewport height
+$default-max-line-height: 2; // Default maximum line height

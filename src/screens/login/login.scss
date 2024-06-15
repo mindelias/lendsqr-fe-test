@@ -1,0 +1,65 @@
+@import '../../styles/main.scss';
+ 
+.login-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    .welcome-title {
+        color: $primary-color;
+        font-size: scale(24px, 40px);
+        text-align: left;
+    }
+    // .item {
+    //     margin-bottom: ;
+    // }
+}
+.left-col {
+    flex: 1;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    background-color: $background-color;
+    height: 100vh;
+    padding: scale(50px, 100px) scale(20px, 70px);
+}
+.logo-wrapper {
+    width: scale(70px, 173px);
+}
+
+.logo-img {
+    width: 100%;
+    height: 40px;
+    object-fit: contain;
+}
+
+.right-col {
+    padding: scale(50px, 100px) scale(20px, 70px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .inner-row {
+        
+        width: 100%;
+        height: 50%;
+    }
+     
+}
+
+.decor-image-container {
+    width:  95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+     img{
+        width: 100%;
+        object-fit: contain;
+     }
+}
+
+ 

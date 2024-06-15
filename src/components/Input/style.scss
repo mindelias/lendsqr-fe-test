@@ -1,0 +1,26 @@
+/* src/components/InputField.scss */
+
+.input-field {
+    margin-bottom: 15px;
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #21407D; /* You can adjust the color as needed */
+    }
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+  
+      &:focus {
+        border-color: #21407D; /* You can adjust the focus color as needed */
+        outline: none;
+      }
+    }
+  }
+  

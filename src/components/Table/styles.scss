@@ -1,0 +1,80 @@
+@import "../../styles/main.scss";
+
+.table-container {
+  padding: 20px;
+  overflow-x: auto;
+  background-color: $white-color;
+  box-shadow: $box-shadow;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: $text-color-primary;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: scaleFont(12px, 14px);
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  text-align: left;
+}
+
+ 
+.responsive-table th {
+  color: $text-color-primary;
+  font-family: $font-family-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.responsive-table td {
+  color: $text-color-primary;
+  font-family: $font-family-primary;
+  font-size: scaleFont(12px, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-span {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-size: scaleFont(8px, 12px);
+  text-align: center;
+}
+
+.status-active {
+  background: opacity($color: #39CD62, $opacity: 0.2);
+  color: #39CD62;
+}
+
+.status-inactive {
+  background:  opacity($color: $text-color-primary, $opacity: 0.2);/* red */
+  color: $text-color-primary;
+}
+
+.status-pending {
+  background: opacity($color: #E9B200, $opacity: 0.2);/* yellow */
+  color: #E9B200
+}
+.status-blacklisted {
+  background: opacity($color: $danger, $opacity: 0.2);/* red */
+  color: $danger
+}
+.ml-5{
+    margin-left: 5px;
+}

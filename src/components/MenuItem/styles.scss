@@ -1,0 +1,54 @@
+@import "../../styles/variable";
+@import "../../styles/responsive";
+@import "../../styles/function";
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: scaleFont(12px, 20px);
+  &.active {
+    // background-color:  rgba(57, 205, 204, 0.2);
+    background-color: opacity($color: $secondary-color, $opacity: 0.2);
+    // opacity: 0.2;
+    border-left: 4px solid $secondary-color;
+  }
+
+  .title {
+    // font-size: scaleFont(12px, 15px);
+    cursor: pointer;
+    // margin: scaleFont(12px, 15px) 0px;
+    color: opacity($color: $primary-color, $opacity: 0.6);
+    font-size: scaleFont(10px, 17px);
+    text-decoration: none;
+    text-align: left;
+    font-family: $font-family-primary;
+    &:hover {
+      color: $primary-color;
+      opacity: 0.5;
+    }
+
+    &.active {
+      color: opacity($color: $primary-color, $opacity: 1);
+    }
+  }
+  .icon {
+    margin-right: 8px;
+    img {
+      width: scaleFont(12px, 15px);
+      // height: 100%;
+    }
+  }
+}
+.submenu-title {
+  padding-left: scaleFont(5px, 20px);
+  padding-right: scaleFont(10px, 20px);
+  color: $text-color-primary;
+  text-align: left;
+  font-size: scaleFont(8px, 13px);
+  margin-bottom: scaleFont(5px, 12px);
+  text-decoration: none;
+  font-family: $font-family-primary;
+  text-transform: uppercase;
+}
+
+
