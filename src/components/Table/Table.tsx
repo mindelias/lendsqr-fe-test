@@ -19,10 +19,10 @@ const Table = ({ data }: { data: any }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [filterType, setFilterType] = useState<string | null>("");
 
-  const [filterValues, setFilterValues] = useState<{ [key: string]: string }>({
-    phoneNumber: "",
-    status: ""
-  });
+  // const [filterValues, setFilterValues] = useState<{ [key: string]: string }>({
+  //   phoneNumber: "",
+  //   status: ""
+  // });
 
   // const mockData = generateMockData(500); //
 
@@ -33,12 +33,12 @@ const Table = ({ data }: { data: any }) => {
     setFilterType(isOpen ? filterType : null);
   };
 
-  const handleFilterChange = (key: string, value: string) => {
-    setFilterValues(prevValues => ({
-      ...prevValues,
-      [key]: value
-    }));
-  };
+  // const handleFilterChange = (key: string, value: string) => {
+  //   setFilterValues(prevValues => ({
+  //     ...prevValues,
+  //     [key]: value
+  //   }));
+  // };
 
   return (
     <div className="table-container">
@@ -52,10 +52,7 @@ const Table = ({ data }: { data: any }) => {
                 label={header.name}
                 isOpen={isOpen}
                 filterType={filterType as string}
-                filterValues={filterValues}
                 handleOpenChange={handleOpenChange}
-                handleFilterChange={handleFilterChange}
-
               />
             ))}
             <th> </th>

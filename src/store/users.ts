@@ -86,7 +86,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
     //     user[key as keyof User]?.toString().toLowerCase().includes(value.toString().toLowerCase())
     //   )
     // );
-    set({ filteredUsers, page: 1, total: filteredUsers.length }); // Reset to first page on filter
+    set({ filteredUsers, page: 1,  total: filteredUsers.length }); // Reset to first page on filter
   },
   resetFilter: () => {
     const { users } = get();
