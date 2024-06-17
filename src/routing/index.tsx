@@ -17,7 +17,7 @@ function AppRoute() {
     <BrowserRouter>
       <Routes>
         <Route key={14} path="/login" element={<Login />} />
-        <Route key={14} path="/forgot-password" element={<ForgotPassword />} />
+        <Route key={15} path="/forgot-password" element={<ForgotPassword />} />
         {routes.map((route) => (
           <Route key={route.id} path={route.path} element={<ProtectedRoute element={route.element as JSX.Element}  />}  />
         ))}

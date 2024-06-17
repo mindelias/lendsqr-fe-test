@@ -28,7 +28,7 @@ const Users = () => {
         {loading && users.length > 1 ? <div>Loading...</div> : <Table data={paginatedUsers} />}
       </div>
 
-      <CustomPagination currentPage={page} total={total} pageSize={perPage} setPage={setPage} />
+      <CustomPagination currentPage={page} total={total} showing={paginatedUsers.length} pageSize={perPage} setPage={setPage} />
     </div>
   );
 };

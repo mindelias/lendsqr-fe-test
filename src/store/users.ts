@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 import axios from "axios";
 import dayjs from "dayjs";
+import locallyStoredUser from "../data/user/user-data.json";
 
 export const useUserStore = create<UserStore>((set, get) => ({
   users: [],
@@ -16,23 +17,34 @@ export const useUserStore = create<UserStore>((set, get) => ({
     set({ loading: true, error: null });
     try {
       const { page, perPage } = get();
+      // Todo: extract this to a utility function
+      // TODO:  define url in a constant file
       const response = await axios.get(
         `https://run.mocky.io/v3/8cc1a565-3ff5-403f-8b1f-f5dd4050e343?page=${page}&perPage=${perPage}`
       );
+      const userData = response?.data && response?.data?.data;
+
       set((state) => ({
         ...state,
-        users: response.data.data,
-        filteredUsers: response.data.data,
+        users: userData.length > 0 ? userData : locallyStoredUser.data,
+        filteredUsers: userData.length > 0 ? userData : locallyStoredUser.data,
         loading: false,
-        total: response.data.data.length,
+        total: userData.length > 0 ? userData.length : locallyStoredUser.data.length,
       }));
     } catch (error) {
-      set({ loading: false, error: "Failed to fetch users" });
+      set((state) => ({
+        ...state,
+        users: locallyStoredUser.data as unknown as User[],
+        filteredUsers: locallyStoredUser.data as unknown as User[],
+        total: locallyStoredUser.data.length,
+        loading: false,
+        error: null,
+      }));
     }
   },
   getUser: (id) => {
     const { users } = get();
-    const user = users.find((user) => user.id === id);    
+    const user = users.find((user) => user.id === id);
     set((state) => ({
       ...state,
       user: user || null,
@@ -74,7 +86,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
     //     user[key as keyof User]?.toString().toLowerCase().includes(value.toString().toLowerCase())
     //   )
     // );
-    set({ filteredUsers, page: 1, total: filteredUsers.length }); // Reset to first page on filter
+    set({ filteredUsers, page: 1,  total: filteredUsers.length }); // Reset to first page on filter
   },
   resetFilter: () => {
     const { users } = get();

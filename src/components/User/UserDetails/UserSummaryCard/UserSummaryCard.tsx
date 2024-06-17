@@ -16,7 +16,7 @@ const UserSummaryCard = ({user}: {user: Partial<User>}) => {
           </div>
         </Col>
         <Col>
-          <p className="app-heading--4 mb-10">Grace Effiom</p>
+          <p className="app-heading--4 mb-10">{user?.fullName}</p>
           <p className="app-paragraph text-left">LSQFf587g90</p>
         </Col>
       </Row>
@@ -32,7 +32,7 @@ const UserSummaryCard = ({user}: {user: Partial<User>}) => {
       </div>
     </Col>
     <Col>
-      <p className="app-heading--4 mb-10 text-left"> {formatCurrency(parseFloat(user.educationAndEmployment?.monthlyIncome[0] as string))}</p>
+      <p className="app-heading--4 mb-10 text-left"> {formatCurrency(parseFloat(user?.educationAndEmployment?.monthlyIncome[0] as string))}</p>
 
       <p className="app-paragraph">9912345678/Providus Bank</p>
     </Col>

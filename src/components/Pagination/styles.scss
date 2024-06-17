@@ -1,9 +1,18 @@
 @import '../../styles/main.scss';
 
 .pagination-wrapper{
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     width: 100%;
+    .mt-10{
+        margin-top: 10px;
+    }
+    p{
+        text-align: left;
+        @include respond-to(md) {
+             text-align: center;
+        }
+    }
 }
 
 .total-info{
