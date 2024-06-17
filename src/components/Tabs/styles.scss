@@ -3,14 +3,13 @@
 
 .tab-list {
     display: flex;
-    // justify-content: center;
     margin-top: scale(15px, 30px);
     width: 100%;
+    overflow-x: scroll;
   }
   
   .tab {
     padding: 5px 10px;
-   
     cursor: pointer;
     text-align: center;
     font-size:  scaleFont(12px, 16px);
@@ -19,7 +18,9 @@
     line-height: normal;
     border-bottom: 2px solid transparent;    
     font-family:  $font-family-primary;
-    width: 15%;
+    white-space: nowrap;
+    // max-width: 15%;
+    flex: 1;
   }
   
   .tab.active {

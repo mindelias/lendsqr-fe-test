@@ -8,23 +8,10 @@ const UserMetricCardList = () => {
   return (
     <Row gutter={16} >
       {userMetrics.map((item) => (
-        <Col span={6} xl={6} sm={12} xs={24} key={item.title}>
+        <Col span={6} xl={6} md={8} xs={12} key={item.title} className="mb-lg">
           <UserMetricItemCard  item={item} />
         </Col>
       ))}
-      {/* <Col span={6}>
-        <UserMetricItemCard  item={item}/>
-      </Col>
-
-      <Col span={6}>
-        <UserMetricItemCard />
-      </Col>
-      <Col span={6}>
-        <UserMetricItemCard />
-      </Col>
-      <Col span={6}>
-        <UserMetricItemCard />
-      </Col> */}
     </Row>
   );
 };
